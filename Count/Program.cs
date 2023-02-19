@@ -18,7 +18,7 @@ void Find(int[] numbers)
 {
     int index = 0;
     int count = 0;
-    int number = Input("Введите чило: ");
+    int number = Input("Введите число: ");
 
     for (index = 0; index < numbers.Length; index++)
         {
