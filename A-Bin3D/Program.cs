@@ -2,59 +2,35 @@
 //A (3,6,8); B (2,1,-7), -> 15.84
 //A (7,-5, 0); B (1,-1,9) -> 11.53
 
-// ввод данных пользователем +
-int Input(string number)
+// double distance = ((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2)^0.5; - как вычесть корень?! - Math.Sqrt()
+// return distance;
+//Console.WriteLine($"{distance}");
+
+// вовдим координаты для посчета дистанции по формуле
+double Main(string[] args)
 {
-    Console.Write(number + " ");
-    return Convert.ToInt32(Console.ReadLine());
+double x1, y1, z1;
+double x2, y2, z2;
+double distance;
+    Console.WriteLine("Ведите данные по инстукции: ");
+    Console.WriteLine("Введите значения для точки А: ");
+    Console.Write("x1 =" + " ");
+    x1 = double.Parse(Console.ReadLine());
+    Console.Write("y1 =" + " ");
+    y1 = double.Parse(Console.ReadLine());
+    Console.Write("z1 =" + " ");
+    z1 = double.Parse(Console.ReadLine());
+    Console.WriteLine("Введите значения для точки В: ");
+    Console.Write("x2 =" + " ");
+    x2 = double.Parse(Console.ReadLine());
+    Console.Write("y2 =" + " ");
+    y2 = double.Parse(Console.ReadLine());
+    Console.Write("z2 =" + " ");
+    z2 = double.Parse(Console.ReadLine());
+// формула вычисления дистаниции 
+    distance = Math.Sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1) + (z2 - z1)*(z2 - z1));
+    return distance;
 }
-
-//int Dist()
-
-//int x1 = 3; 
-//int y1 = 6; 
-//int z1 = 8;
-//int x2 = 2; 
-//int y2 = 1; 
-//int z2 = -7;
-{
-   // int distance = ((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2)^0.5;
-  //  return distance;
-}
-
-//Console.WriteLine(distance);
-//Dist();
-
-int Main() 
-{
-  
-  Console.Write("Введите число: "); // которое программа возводит в степень + 
-  int num = Convert.ToInt32(Console.ReadLine());
-  return num;
-}
-  //степень числа
- // Console.Write("Введите степень: ");
-  //int n = int.Parse(Console.ReadLine());
-  //int n = 0;
-  //число, возведенное в степень
-  
-void InCybic(int number)
-{
-    int InCybic;
-  for(int i = 1; i <= number; i++) 
-  {
-    InCybic = i * i * i;
-    Console.Write($"{InCybic} ");  
-  }
-  
-  //Console.WriteLine("{0} ^ {1} = {2}", num, n, num_n);
-  //Console.ReadKey();
-}
-
-int num = Main();
-Console.Write($"Таблица кубов: ");
-// Console.WriteLine($"Таблица кубов: ");
-InCybic(num);
-
-
-
+double distance = Main(args);
+Console.WriteLine($"Дистанция между А и В составляет: ");
+Console.WriteLine($"{distance}");
