@@ -11,7 +11,6 @@ int Input(string number)
 }
 
 // проверка введенного числа + 
-
     int n = 0; 
     int r = 0; 
     int sum = 0; 
@@ -20,15 +19,15 @@ int Input(string number)
     number = n;      
     while (n > 0)      
         {      
-        r = 4 % 10;      
+        r = n % 10;      
         sum = (sum * 10) + r;      
         n = n / 10;      
-        }      
-    if (number == sum)      
+        }
+    if (number == sum)    
     Console.WriteLine("Да");      
     else      
-    Console.WriteLine("Нет");     
-
+    Console.WriteLine("Нет");
+    
 
 // ктурая формула, которую нашла: 
 // 12821 % 10 = 1

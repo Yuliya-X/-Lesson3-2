@@ -2,9 +2,10 @@
 //A (3,6,8); B (2,1,-7), -> 15.84
 //A (7,-5, 0); B (1,-1,9) -> 11.53
 
+// double Main(string[] args)
 // double distance = ((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2)^0.5; - как вычесть корень?! - Math.Sqrt()
 // return distance;
-//Console.WriteLine($"{distance}");
+// Console.WriteLine($"{distance}");
 
 // вовдим координаты для посчета дистанции по формуле
 double Main(string[] args)
@@ -12,7 +13,7 @@ double Main(string[] args)
 double x1, y1, z1;
 double x2, y2, z2;
 double distance;
-    Console.WriteLine("Ведите данные по инстукции: ");
+    Console.WriteLine("Введите данные по инструкции: ");
     Console.WriteLine("Введите значения для точки А: ");
     Console.Write("x1 =" + " ");
     x1 = double.Parse(Console.ReadLine());
